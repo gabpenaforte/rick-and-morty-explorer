@@ -1,20 +1,22 @@
-import { MdOutlinePersonSearch } from "react-icons/md";
+import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Cards from "./components/Cards/Cards.js";
+import ActionAreaCard from "./components/Cards/Cards.js";
+import Header from "./components/Header/Header.js";
+import InputSearch from "./components/Search/InputSearch.js";
+
 
 function App() {
   return (
     <div className="App">
-      <div className="topSection">
-      <MdOutlinePersonSearch size={25} color='black'/>
-      <h1 className="text-center fw-bold ubuntu my-4">rick and morty <span className="fw-lighter">explorer</span></h1>
-      </div>
+      <Header />
+
+      <InputSearch />
 
       <div className="container">
         <div className="row">
-              <Cards />
-              <Cards />
+          <ActionAreaCard />
+          <ActionAreaCard />
         </div>
       </div>
     </div>
