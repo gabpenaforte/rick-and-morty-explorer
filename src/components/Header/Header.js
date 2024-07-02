@@ -38,8 +38,8 @@ function Header() {
       </div>
 
       <div
-        className=""
-        style={{ position: "absolute", top: "190px", right: "260px" }}
+        className="rickAndMorty"
+        style={{ position: "absolute", top: "200px", right: "260px" }}
       >
         <img src={rickAndMorty} alt="rick and morty" style={{ width:"200px", height:"150px" }}/>
       </div>

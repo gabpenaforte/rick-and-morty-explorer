@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap";
 import ActionAreaCard from "./components/Cards/Cards.js";
 import Header from "./components/Header/Header.js";
 import InputSearch from "./components/Search/InputSearch.js";
+import PaginationButtons from "./components/Pagination/Pagination.js";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <ActionAreaCard />
         </div>
       </div>
+
+      <PaginationButtons />
     </div>
   );
 }
