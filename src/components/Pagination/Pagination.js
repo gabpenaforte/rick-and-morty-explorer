@@ -1,11 +1,15 @@
-import * as React from 'react';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
+import * as React from "react";
+import { Pagination, Box } from "@mui/material";
 
 export default function PaginationButtons() {
   return (
-    <Stack spacing={2}>
-      <Pagination count={10} showFirstButton showLastButton sx={{ alignContent: 'center'}}/>
-    </Stack>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <Pagination count={10} showFirstButton showLastButton />
+    </Box>
   );
 }
