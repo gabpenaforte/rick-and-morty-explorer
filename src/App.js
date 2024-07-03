@@ -10,6 +10,7 @@ function App() {
       <Header.Root>
         <Header.Subtitle />
         <Header.Title />
+        <Header.Image/>
       </Header.Root>
 
       <InputSearch />
