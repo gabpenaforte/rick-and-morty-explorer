@@ -12,7 +12,7 @@ export const Root = styled.header`
 export const Title = styled(Typography)`
   width: 350px;
   position: relative;
-  top: 80px;
+  top: 120px;
   left: 230px;
   color: #58151c;
 `;
@@ -20,9 +20,9 @@ export const Title = styled(Typography)`
 export const Subtitle = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
-  top: 25px;
-  left: 230px;
+  position: absolute;
+  top: 40px;
+  left: 250px;
 
   span {
     margin-left: 16px;
