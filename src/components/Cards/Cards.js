@@ -1,35 +1,13 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions } from "@mui/material";
 import { Heart, HeartSlash, Unlimited } from "iconsax-react";
-import axios from "axios";
 
-export default function ActionAreaCard() {
-  const [characters, setCharacters] = useState([]);
 
-  const getCharacters = async () => {
-    try {
-      const response = await axios.get(
-        "https://rickandmortyapi.com/api/character"
-      );
-
-      const data = response.data;
-
-      setCharacters(data.results);
-      console.log(data.results);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  useEffect(() => {
-    getCharacters();
-  }, []);
-
+export default function ActionAreaCard({ characters }) {
   return (
     <>
       {characters.map((character) => (
