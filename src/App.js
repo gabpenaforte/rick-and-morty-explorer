@@ -10,11 +10,12 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [pages, setPages] = useState([]);
+  const [search, setSearch] = useState("");
 
   const getCharacters = async (pageNumber) => {
     try {
       const response = await axios.get(
-        `https://rickandmortyapi.com/api/character/?page=${pageNumber}`
+        `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
       );
 
       const data = response.data;
@@ -28,7 +29,7 @@ const App = () => {
 
   useEffect(() => {
     getCharacters(pageNumber);
-  }, [pageNumber]);
+  }, [pageNumber, search]);
 
   return (
     <div className="App">
@@ -38,7 +39,7 @@ const App = () => {
         <Header.Image />
       </Header.Root>
 
-      <InputSearch />
+      <InputSearch setSearch={setSearch} setPageNumber={setPageNumber}/>
 
       <div className="container">
         <div className="row">

@@ -2,7 +2,12 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-export default function InputSearch() {
+export default function InputSearch({ setSearch, setPageNumber }) {
+  const handleChangeSearch = e => {
+    setPageNumber(1);
+    setSearch(e.target.value);
+  }
+
   return (
     <Box
       component="form"
@@ -21,6 +26,7 @@ export default function InputSearch() {
     >
       <TextField
         id="outlined-basic"
+        onChange={handleChangeSearch}
         label="Digite o nome do personagem"
         variant="outlined"
       />
