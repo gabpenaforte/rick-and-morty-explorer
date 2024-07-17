@@ -2,9 +2,8 @@ import * as React from "react";
 import { Pagination, Box } from "@mui/material";
 
 export default function PaginationButtons({ pages, setPageNumber }) {
-  const handlePageChange = (e) => {
-    setPageNumber(e.target.innerText);
-    console.log(e)
+  const handlePageChange = ( _ , page) => {
+    setPageNumber(page);
   };
 
   return (
@@ -17,7 +16,7 @@ export default function PaginationButtons({ pages, setPageNumber }) {
     >
       <Pagination
         count={pages}
-        onChange={(e) => handlePageChange(e)}
+        onChange={handlePageChange}
         showFirstButton
         showLastButton
       />
