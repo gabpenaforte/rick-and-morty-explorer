@@ -3,10 +3,12 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
 export default function InputSearch({ setSearch, setPageNumber }) {
-  const handleChangeSearch = e => {
-    setPageNumber(1);
-    setSearch(e.target.value);
-  }
+  const handleChangeSearch = (e) => {
+    setTimeout(() => {
+      setPageNumber(1);
+      setSearch(e.target.value);
+    }, 500);
+  };
 
   return (
     <Box
