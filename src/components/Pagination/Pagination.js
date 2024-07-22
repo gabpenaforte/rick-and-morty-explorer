@@ -1,7 +1,9 @@
 import * as React from "react";
 import { Pagination, Box } from "@mui/material";
+import { useAppStore } from "../../store";
 
-export default function PaginationButtons({ pages, setPageNumber }) {
+export default function PaginationButtons() {
+  const { pages, pageNumber, setPageNumber } = useAppStore();
   const handlePageChange = ( _ , page) => {
     setPageNumber(page);
   };
@@ -16,6 +18,7 @@ export default function PaginationButtons({ pages, setPageNumber }) {
     >
       <Pagination
         count={pages}
+        page={pageNumber}
         onChange={handlePageChange}
         showFirstButton
         showLastButton
