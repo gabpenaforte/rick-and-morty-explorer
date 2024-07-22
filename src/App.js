@@ -1,34 +1,21 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useAppStore } from './store';
 import Card from "./components/Cards/Cards.js";
 import Header from "./components/Header/index.js";
 import InputSearch from "./components/Search/InputSearch.js";
 import PaginationButtons from "./components/Pagination/Pagination.js";
-import axios from "axios";
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [pages, setPages] = useState([]);
-  const [search, setSearch] = useState("");
-
-  const getCharacters = async (pageNumber) => {
-    try {
-      const response = await axios.get(
-        `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
-      );
-
-      const data = response.data;
-
-      setCharacters(data.results);
-      setPages(data.info.pages);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+const {
+  charactersList,
+  pageNumber,
+  search,
+  getCharacters
+} = useAppStore();
 
   useEffect(() => {
-    getCharacters(pageNumber);
+    getCharacters(search, pageNumber);
   }, [pageNumber, search]);
 
   return (
@@ -39,15 +26,15 @@ const App = () => {
         <Header.Image />
       </Header.Root>
 
-      <InputSearch setSearch={setSearch} setPageNumber={setPageNumber}/>
+      <InputSearch />
 
       <div className="container">
         <div className="row">
-          <Card page="/" characters={characters} />
+          <Card page="/" characters={charactersList} />
         </div>
       </div>
 
-      <PaginationButtons pages={pages} setPageNumber={setPageNumber} />
+      <PaginationButtons />
     </div>
   );
 };

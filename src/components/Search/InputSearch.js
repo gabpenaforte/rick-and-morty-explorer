@@ -1,8 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import { useAppStore } from "../../store";
 
-export default function InputSearch({ setSearch, setPageNumber }) {
+export default function InputSearch() {
+  const { search, setSearch, setPageNumber } = useAppStore();
   const handleChangeSearch = (e) => {
     setTimeout(() => {
       setPageNumber(1);
@@ -31,6 +33,7 @@ export default function InputSearch({ setSearch, setPageNumber }) {
         onChange={handleChangeSearch}
         label="Digite o nome do personagem"
         variant="outlined"
+        defaultValue={search}
       />
     </Box>
   );
