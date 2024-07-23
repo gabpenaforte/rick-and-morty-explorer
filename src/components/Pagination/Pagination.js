@@ -4,7 +4,7 @@ import { useAppStore } from "../../store";
 
 export default function PaginationButtons() {
   const { pages, pageNumber, setPageNumber } = useAppStore();
-  const handlePageChange = ( _ , page) => {
+  const handlePageChange = (_, page) => {
     setPageNumber(page);
   };
 
