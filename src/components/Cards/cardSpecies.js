@@ -1,5 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 const CardSpecies = ({ species }) => {
   return (
@@ -7,6 +8,10 @@ const CardSpecies = ({ species }) => {
       Species: {species}
     </Typography>
   );
+};
+
+CardSpecies.propTypes = {
+  species: PropTypes.string.isRequired,
 };
 
 export default CardSpecies;

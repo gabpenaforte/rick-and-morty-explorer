@@ -1,5 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 const CardName = ({ name }) => {
   return (
@@ -7,6 +8,10 @@ const CardName = ({ name }) => {
       {name}
     </Typography>
   );
+};
+
+CardName.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default CardName;

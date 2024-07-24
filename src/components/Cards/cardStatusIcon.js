@@ -1,5 +1,6 @@
 import React from "react";
 import { Heart, HeartSlash, Unlimited } from "iconsax-react";
+import PropTypes from "prop-types";
 
 const CardStatusIcon = ({ status }) => {
   switch (status) {
@@ -10,6 +11,10 @@ const CardStatusIcon = ({ status }) => {
     default:
       return <Unlimited color="#6495ED" variant="Bold" />;
   }
+};
+
+CardStatusIcon.propTypes = {
+  status: PropTypes.string.isRequired,
 };
 
 export default CardStatusIcon;

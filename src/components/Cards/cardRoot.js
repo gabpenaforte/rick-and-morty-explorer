@@ -7,8 +7,7 @@ const CardRoot = ({ children, key }) => {
       key={key}
       sx={{ maxWidth: 250, marginTop: 5, marginLeft: 8, marginBottom: 5 }}
     >
-      {" "}
-      {children}{" "}
+      {children}
     </Card>
   );
 };

@@ -9,7 +9,7 @@ const Card = () => {
       {charactersList.map((character) => (
         <Cards.CardRoot key={character?.id}>
           <Cards.ActionAreaRoot>
-            <Cards.CardImage image={character?.image} />
+            <Cards.CardImage image={character?.image} title={character?.name}/>
             <Cards.ContentRoot>
               <Cards.CardName name={character?.name}/>
               <Cards.CardSpecies species={character?.species}/>

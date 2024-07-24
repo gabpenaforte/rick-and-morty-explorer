@@ -1,5 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 const CardLocation = ({ location }) => {
   return (
@@ -8,5 +9,9 @@ const CardLocation = ({ location }) => {
     </Typography>
   );
 };
+
+CardLocation.propTypes = {
+  location: PropTypes.string.isRequired,
+}
 
 export default CardLocation;
