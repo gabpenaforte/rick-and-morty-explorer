@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Pagination, Box } from "@mui/material";
+import { Pagination } from "@mui/material";
 import { useAppStore } from "../../store";
+import { Root } from "./styles";
 
 export default function PaginationButtons() {
   const { pages, pageNumber, setPageNumber } = useAppStore();
@@ -9,13 +10,7 @@ export default function PaginationButtons() {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        marginBottom: "10px",
-      }}
-    >
+    <Root>
       <Pagination
         count={pages}
         page={pageNumber}
@@ -23,6 +18,6 @@ export default function PaginationButtons() {
         showFirstButton
         showLastButton
       />
-    </Box>
+    </Root>
   );
 }
