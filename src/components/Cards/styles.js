@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Card, Typography } from "@mui/material";
 
 export const Root = styled(Card)`
-  max-width: 20%;
+  width: 21%;
   margin-top: 50px;
   margin-left: 50px;
   margin-bottom: 30px;
