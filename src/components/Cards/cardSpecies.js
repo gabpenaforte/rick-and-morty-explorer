@@ -1,12 +1,12 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import { Species } from "./styles";
 import PropTypes from "prop-types";
 
 const CardSpecies = ({ species }) => {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Species variant="body2">
       Species: {species}
-    </Typography>
+    </Species>
   );
 };
 

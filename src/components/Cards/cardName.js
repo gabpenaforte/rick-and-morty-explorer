@@ -1,12 +1,12 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import { Name } from "./styles";
 import PropTypes from "prop-types";
 
 const CardName = ({ name }) => {
   return (
-    <Typography gutterBottom variant="h5" component="div">
+    <Name variant="h5">
       {name}
-    </Typography>
+    </Name>
   );
 };
 

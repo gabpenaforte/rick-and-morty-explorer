@@ -1,12 +1,12 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import { Location } from "./styles";
 import PropTypes from "prop-types";
 
 const CardLocation = ({ location }) => {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Location variant="body2">
       Location: {location}
-    </Typography>
+    </Location>
   );
 };
 

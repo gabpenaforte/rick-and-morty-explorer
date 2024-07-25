@@ -1,14 +1,14 @@
 import React from "react";
-import Card from "@mui/material/Card";
+import { Root } from "./styles";
+
 
 const CardRoot = ({ children, key }) => {
   return (
-    <Card
+    <Root
       key={key}
-      sx={{ maxWidth: 250, marginTop: 5, marginLeft: 8, marginBottom: 5 }}
     >
       {children}
-    </Card>
+    </Root>
   );
 };
 
